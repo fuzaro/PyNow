@@ -8,5 +8,18 @@ for item in list(lista1):
 for coo1,coo2 in lista2:
     print (coo1)
     print (coo2)
+
+int(coo1[1])
+coo1[0]
+
+int(coo2[1])
+coo2[0]
+
 lista2
 teste=1
+board=list(string.ascii_lowercase[0:N]),list((range(1,N+1)))
+
+
+ships=[['a1','a2','a3'],['b1','b2','b3],['D2','D3','E2','E3']] 
+
+ships[0].index('a2')
