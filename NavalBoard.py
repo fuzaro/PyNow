@@ -2,6 +2,7 @@
 import string
 S = 'A2 B3,B2 C3,D1 F1,E1 E5'
 N = 6
+T = ['B3', 'C1', 'F1']
 alfa = string.ascii_uppercase
 lista1 = S.split(',')
 lista2=[]
@@ -37,8 +38,22 @@ for coo1,coo2 in lista2:
     ship += 1
 print("ships", ships)
 clone_ship = list(ships)
+for x in T:
+    for i in range(len(ships)):
+        print(len(ships), i)
+        for j in range(len(ships[i])):
+            print(len(ships[i]),x,i, j)
+#            if ships[i][j] == x:
+#                print("fogo ", ships[i][j], " tiro ",x)
+#            else:
+#                print("Agua ", ships[i][j], " tiro ",x)
+print(x)
+
+
+                
+
 print("clone", clone_ship)
-ships.popitem('A2')
+#ships.index('A2')
 
 
 #    shiptype = 2
