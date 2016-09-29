@@ -1,6 +1,6 @@
 # coding: utf-8
 import string
-S = 'A2 B3,B2 C3,D1 F1,E1 E5'
+S = 'A2 B3,B2 C3,D1 F1,E1 E5,B1 K1,D4 D10'
 N = 6
 T = ['B3', 'C1', 'F1']
 alfa = string.ascii_uppercase
@@ -8,14 +8,15 @@ lista1 = S.split(',')
 lista2=[]
 for item in list(lista1):
     lista2.append(item.split())
-
+print(lista2)
 ship = 0
 ships = []
 for coo1,coo2 in lista2:
+    print("ship",ship," coo-> ",coo1,coo2)
     l1 = str(coo1)[0]
     l2 = str(coo2)[0]
-    c1 = int(str(coo1)[1])
-    c2 = int(str(coo2)[1])
+    c1 = int(str(coo1)[1:])
+    c2 = int(str(coo2)[1:])
     if l1 == l2:
         for x in range(c1,c2+1):
             if x == int(c1):
@@ -36,6 +37,7 @@ for coo1,coo2 in lista2:
                 else:
                     ships[ship] = ships[ship]+[l+str(c)]
     ship += 1
+
 print("ships", ships)
 clone_ship = list(ships)
 for x in T:
